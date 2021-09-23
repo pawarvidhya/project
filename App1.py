@@ -1,12 +1,12 @@
 from flask import Flask
 ## WSGI Application This WSGI is Standard which actually used to communicate webserver and web applicaiton to communciate
-app = Flask(__name__) #wsgi applicaiton
+application = Flask(__name__) #wsgi applicaiton
 
-@app.route("/")
+@application.route("/")
 def welcome():
     return "Welcome Msdhoni Cool"
 
-@app.route("/result/<int:score>")
+@application.route("/result/<int:score>")
 def welcome1(score):
     res=""
     if score>50:
@@ -16,4 +16,4 @@ def welcome1(score):
     return res
 
 if __name__=='__main__':
-    app.run(debug=True)
+    application.run(debug=True)
